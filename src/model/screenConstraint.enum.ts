@@ -1,0 +1,6 @@
+enum SCREEN_CONSTRAINT {
+	MOBILE,
+	DESKTOP
+}
+
+export default SCREEN_CONSTRAINT;

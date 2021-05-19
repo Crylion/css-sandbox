@@ -1,0 +1,11 @@
+<div class="CssSandbox" v-if="screenConstraint === SCREEN_CONSTRAINT.DESKTOP">
+  <template v-if="router === ROUTE.CONTENT_CUBE">
+    <ContentCube/>
+  </template>
+</div>
+
+<div class="CssSandbox" v-else-if="screenConstraint === SCREEN_CONSTRAINT.MOBILE">
+  <template v-if="router === ROUTE.CONTENT_CUBE">
+    <ContentCube/>
+  </template>
+</div>
