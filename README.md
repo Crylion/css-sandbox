@@ -1,4 +1,4 @@
-# fachhaendlersuche
+# css-sandbox
 
 ## Project setup
 ```
