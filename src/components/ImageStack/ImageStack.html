@@ -1,0 +1,29 @@
+<div class="ImageStackList">
+	<div class="ImageStack" v-on:click="flipImage()">
+		<div class="ImageStackPanel ImageStackPanel--left" :style="{'transform': `rotateY(${-(turns * 180)}deg)`}">
+			<div class="ImageStackPanelSide ImageStackPanelSide--front">
+				<div class="ImageStackPanelSide__image" :style="{'background-image': `url(${imageSide1})`}"></div>
+			</div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--back">
+				<div class="ImageStackPanelSide__image" :style="{'background-image': `url(${imageSide2})`}"></div>
+			</div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--sideBottom"></div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--sideTop"></div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--sideRight"></div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--sideLeft"></div>
+		</div>
+		<div class="ImageStackPanel ImageStackPanel--right" :style="{'transform': `rotateY(${turns * 180}deg)`}">
+			<div class="ImageStackPanelSide ImageStackPanelSide--front">
+				<div class="ImageStackPanelSide__image" :style="{'background-image': `url(${imageSide1})`}"></div>
+			</div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--back">
+				<div class="ImageStackPanelSide__image" :style="{'background-image': `url(${imageSide2})`}"></div>
+			</div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--sideBottom"></div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--sideTop"></div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--sideRight"></div>
+			<div class="ImageStackPanelSide ImageStackPanelSide--sideLeft"></div>
+		</div>
+	</div>
+
+</div>

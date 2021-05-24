@@ -1,3 +1,4 @@
+@import '@/assets/scss/_reset.scss';
 
 // function to convert pixel-height to rem height to make font sizes more readable
 @function fontCalc($size) {
@@ -25,6 +26,34 @@
 
     &--disabled {
       cursor: not-allowed;
+    }
+  }
+
+  .Navigation {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .NavigationItem {
+    width: 64px;
+    height: 64px;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    background-size: 28px;
+
+    &:not(.NavigationItem--active):hover {
+      background-color: #EFEFEF;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #BBB;
+    }
+
+    &--active {
+      background-color: #DDD;
     }
   }
 

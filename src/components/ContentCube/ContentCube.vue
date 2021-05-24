@@ -17,7 +17,7 @@ import * as Quaternion from 'quaternion';
 		})
 	}
 })
-export default class BookingTypeInput extends Vue {
+export default class ContentCube extends Vue {
 	public transformStyle = '';
 
 	private panX = 0;
@@ -34,8 +34,8 @@ export default class BookingTypeInput extends Vue {
 	private quat!: any;
 
 	public onPan (event: any) {
-		this.panX = this.panXStart + (event.deltaX * 0.2); // divided by 5 to make it a bite less sensitive
-		this.panY = this.panYStart + (event.deltaY * 0.2);
+		this.panX = this.panXStart + (event.deltaX * 0.15); // divided by 5 to make it a bite less sensitive
+		this.panY = this.panYStart + (event.deltaY * 0.15);
 		// this.panAngle = (event.angle) - this.panAngleStart;
 
 		this.rotationValues.x = -this.panY / 180 * Math.PI;

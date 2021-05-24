@@ -1,11 +1,25 @@
 <div class="CssSandbox" v-if="screenConstraint === SCREEN_CONSTRAINT.DESKTOP">
+  <div class="Navigation">
+    <button tabindex="0" class="NavigationItem icon-cube" :class="{'NavigationItem--active': router === ROUTE.CONTENT_CUBE}" v-on:click="changeRoute(ROUTE.CONTENT_CUBE)"></button>
+    <button tabindex="0" class="NavigationItem icon-stack" :class="{'NavigationItem--active': router === ROUTE.IMAGE_STACK}" v-on:click="changeRoute(ROUTE.IMAGE_STACK)"></button>
+  </div>
   <template v-if="router === ROUTE.CONTENT_CUBE">
     <ContentCube/>
+  </template>
+  <template v-if="router === ROUTE.IMAGE_STACK">
+    <ImageStack/>
   </template>
 </div>
 
 <div class="CssSandbox" v-else-if="screenConstraint === SCREEN_CONSTRAINT.MOBILE">
+  <div class="Navigation">
+    <button tabindex="0" class="NavigationItem icon-cube" v-on:click="changeRoute(ROUTE.CONTENT_CUBE)"></button>
+    <button tabindex="0" class="NavigationItem icon-stack"  v-on:click="changeRoute(ROUTE.IMAGE_STACK)"></button>
+  </div>
   <template v-if="router === ROUTE.CONTENT_CUBE">
     <ContentCube/>
+  </template>
+  <template v-if="router === ROUTE.IMAGE_STACK">
+    <ImageStack/>
   </template>
 </div>
